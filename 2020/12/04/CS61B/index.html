@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lambdafate.github.io","root":"/","images":"/images","scheme":"Mist","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+
+  <meta name="description" content="CS61B即使你只做过Proj0, 还未开始其他的HW, lab和Project, 也能立刻体会到这门课的精彩。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS61B">
+<meta property="og:url" content="https://lambdafate.github.io/2020/12/04/CS61B/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="CS61B即使你只做过Proj0, 还未开始其他的HW, lab和Project, 也能立刻体会到这门课的精彩。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/04/Dq1qcn.gif">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/07/DxIWOf.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/07/DxIL60.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/09/rPe94x.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/09/rPGbPe.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/09/rPJ9IS.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/12/rZ3FHA.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/12/rZGrp6.jpg">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/11/rE82Ix.jpg">
+<meta property="article:published_time" content="2020-12-04T12:23:02.000Z">
+<meta property="article:modified_time" content="2020-12-12T13:17:23.249Z">
+<meta property="article:author" content="lambdafate">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2020/12/04/Dq1qcn.gif">
+
+
+<link rel="canonical" href="https://lambdafate.github.io/2020/12/04/CS61B/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>CS61B | Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tutorial">
+
+    <a href="/tutorial/" rel="section"><i class="fas fa-cookie-bite fa-fw"></i>Tutorial</a>
+
+  </li>
+        <li class="menu-item menu-item-wiki">
+
+    <a href="/wiki/" rel="section"><i class="fab fa-wikipedia-w fa-fw"></i>Wiki</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="https://github.com/lambdafate" rel="noopener" target="_blank"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CS61B"><span class="nav-number">1.</span> <span class="nav-text">CS61B</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E5%85%B3%E7%AE%97%E6%B3%95-%E7%9C%9F%E6%AD%A3%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D-Proj0-A-crash-course-in-Java"><span class="nav-number">2.</span> <span class="nav-text">无关算法-真正开始之前 Proj0: A crash course in Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Double-Ended-Queue"><span class="nav-number">3.</span> <span class="nav-text">Double Ended Queue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedListDeque"><span class="nav-number">3.1.</span> <span class="nav-text">LinkedListDeque</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayDeque"><span class="nav-number">3.2.</span> <span class="nav-text">ArrayDeque</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#little-tips"><span class="nav-number">3.3.</span> <span class="nav-text">little tips</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proj2"><span class="nav-number">4.</span> <span class="nav-text">Proj2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Union-Find"><span class="nav-number">5.</span> <span class="nav-text">Union Find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tree"><span class="nav-number">6.</span> <span class="nav-text">Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BST"><span class="nav-number">6.1.</span> <span class="nav-text">BST</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Trees"><span class="nav-number">6.2.</span> <span class="nav-text">B-Trees</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Red-Black-Trees"><span class="nav-number">6.3.</span> <span class="nav-text">Red-Black Trees</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hashing"><span class="nav-number">7.</span> <span class="nav-text">Hashing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-Hashing-a-Collection"><span class="nav-number">7.1.</span> <span class="nav-text">Example: Hashing a Collection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BSTMap%E5%92%8CHashMap%E5%AE%9E%E7%8E%B0-github"><span class="nav-number">7.2.</span> <span class="nav-text">BSTMap和HashMap实现: github</span></a></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lambdafate"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">lambdafate</p>
+  <div class="site-description" itemprop="description">May you break free from the shackles of parentheses and find the spirit who lives in the computer</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lambdafate" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lambdafate" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2350622075@qq.com" title="E-Mail → mailto:2350622075@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://douban.com/people/191990489" title="豆瓣 → http:&#x2F;&#x2F;douban.com&#x2F;people&#x2F;191990489" rel="noopener" target="_blank">豆瓣</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://www.zhihu.com/people/wu-jun-rong-73" title="知乎 → http:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;wu-jun-rong-73" rel="noopener" target="_blank">知乎</a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lambdafate.github.io/2020/12/04/CS61B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="lambdafate">
+      <meta itemprop="description" content="May you break free from the shackles of parentheses and find the spirit who lives in the computer">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CS61B
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-12-04 19:23:02" itemprop="dateCreated datePublished" datetime="2020-12-04T19:23:02+07:00">2020-12-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2020-12-12 20:17:23" itemprop="dateModified" datetime="2020-12-12T20:17:23+07:00">2020-12-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="CS61B"><a href="#CS61B" class="headerlink" title="CS61B"></a>CS61B</h2><p>即使你只做过Proj0, 还未开始其他的HW, lab和Project, 也能立刻体会到这门课的精彩。</p>
+<a id="more"></a>
+
+<h2 id="无关算法-真正开始之前-Proj0-A-crash-course-in-Java"><a href="#无关算法-真正开始之前-Proj0-A-crash-course-in-Java" class="headerlink" title="无关算法-真正开始之前 Proj0: A crash course in Java"></a>无关算法-真正开始之前 Proj0: A crash course in Java</h2><p>Project0无关算法, 它会让你使用Java做一个模拟lab, 简而言之, 你会在两周之内了解Java, Git, Unit Testing等知识, 之后做一个小项目(反观国内, 很多大学要开一学期的Java语法课, 做着无聊透顶的CRUD, 最后还要做题考试), 项目很简单, 但学到的不止是语法</p>
+<ol>
+<li>如何完成一个Big thing? 先从小的地方开始, 为了完成这个项目, 你会从最简单的构造函数开始一步一步设计API, 每一个API又会用到你之前写好的API, 从底层一直抽象到上层, 直到完成我们的目标。  </li>
+<li>如何保证你的程序是正确的? 从第一步开始, 你的每一小步都要经过测试, 最终保证整个程序的正确性。  </li>
+</ol>
+<p>最后你会看到星球运转的模拟动画, 不懂物理的程序员不是好的程序员 :)<br><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/Dq1qcn"><img src="https://s3.ax1x.com/2020/12/04/Dq1qcn.gif" alt="Dq1qcn.gif"></a>  </p>
+<h2 id="Double-Ended-Queue"><a href="#Double-Ended-Queue" class="headerlink" title="Double Ended Queue"></a>Double Ended Queue</h2><p>在Proj1A中要基于数组和链表设计双端队列。  </p>
+<h3 id="LinkedListDeque"><a href="#LinkedListDeque" class="headerlink" title="LinkedListDeque"></a><a target="_blank" rel="noopener" href="https://github.com/lambdafate/CS61B-SP18/blob/master/proj1a/LinkedListDeque.java">LinkedListDeque</a></h3><p>基于链表设计时, 两端添加, 删除节点时间复杂度为 <code>O(1)</code>, 但 <code>get(index)</code> 操作时间复杂度为 <code>O(n)</code>.<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DxIWOf"><img src="https://s3.ax1x.com/2020/12/07/DxIWOf.jpg" alt="DxIWOf.jpg"></a></p>
+<h3 id="ArrayDeque"><a href="#ArrayDeque" class="headerlink" title="ArrayDeque"></a><a target="_blank" rel="noopener" href="https://github.com/lambdafate/CS61B-SP18/blob/master/proj1a/ArrayDeque.java">ArrayDeque</a></h3><p>基于数组设计时两端添加, 删除节点, <code>get(index)</code>操作的时间复杂度都可以是 <code>O(1)</code>,  但是存在 <code>resize array</code>(数组填满时resize成大数组, 删除过多元素后resize成小数组) 的问题.<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/DxIL60"><img src="https://s3.ax1x.com/2020/12/07/DxIL60.jpg" alt="DxIL60.jpg"></a></p>
+<h3 id="little-tips"><a href="#little-tips" class="headerlink" title="little tips"></a>little tips</h3><ul>
+<li>Java pass by value.<br>When you write y = x, you are telling the Java interpreter to copy the bits from x into y. When you pass parameters to a function, you are also simply copying the bits. Copying the bits is usually called “pass by value”. In Java, we always pass by value.</li>
+<li>减少special case.<br>A cleaner, though less obvious solution, is to make it so that all SLLists are the “same”, even if they are empty. We can do this by creating a special node that is always there, which we will call a sentinel node. The sentinel node will hold a value, which we won’t care about.</li>
+<li>练习:  <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/design-circular-queue/">leetcode 622.设计循环队列</a> &nbsp;&nbsp;<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/design-circular-deque/">leetcode 641. 设计循环双端队列</a>  </li>
+</ul>
+<h2 id="Proj2"><a href="#Proj2" class="headerlink" title="Proj2"></a>Proj2</h2><p>pass</p>
+<h2 id="Union-Find"><a href="#Union-Find" class="headerlink" title="Union Find"></a>Union Find</h2><p>在计算机科学中, 并查集是一种树型的数据结构, 用于处理一些不交集(Disjoint Sets)的合并及查询问题.  </p>
+<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/rPe94x"><img src="https://s3.ax1x.com/2020/12/09/rPe94x.jpg" alt="rPe94x.jpg"></a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnionFind</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, N</span>):</span></span><br><span class="line">        <span class="comment"># 每个元素的父节点, 如果 i == parent[i] 则i为root节点</span></span><br><span class="line">        self.parent = [i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N)]</span><br><span class="line">        <span class="comment"># 记录以i为 root节点, 该tree的所有节点数</span></span><br><span class="line">        self.size   = [<span class="number">1</span>] * N</span><br><span class="line">        <span class="comment"># 集合分组数, 初始化为N, 每当两个集合合并, group减一</span></span><br><span class="line">        self.group  = N</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">find_parent</span>(<span class="params">self, i</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        # loop find</span></span><br><span class="line"><span class="string">        while i != self.parent[i]:</span></span><br><span class="line"><span class="string">            i = self.parent[i]</span></span><br><span class="line"><span class="string">        return i</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># Path Compression</span></span><br><span class="line">        <span class="comment"># 当找到节点i的root节点时, 直接更新parent[i]的值为其root节点</span></span><br><span class="line">        <span class="keyword">if</span> i == self.parent[i]:</span><br><span class="line">            <span class="keyword">return</span> i</span><br><span class="line">        self.parent[i] = self.find_parent(self.parent[i])</span><br><span class="line">        <span class="keyword">return</span> self.parent[i]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isConnected</span>(<span class="params">self, p, q</span>):</span></span><br><span class="line">        <span class="comment"># 如果p, q有相同的root节点(所属一颗tree), 则p, q已经连接</span></span><br><span class="line">        <span class="keyword">return</span> self.find_parent(p) == self.find_parent(q)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">connect</span>(<span class="params">self, p, q</span>):</span></span><br><span class="line">        i = self.find_parent(p)</span><br><span class="line">        j = self.find_parent(q)</span><br><span class="line">        <span class="keyword">if</span> i == j:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">if</span> self.size[i] &lt; self.size[j]:</span><br><span class="line">            self.parent[i] = j</span><br><span class="line">            self.size[j] += self.size[i]          <span class="comment"># 更新节点数   </span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.parent[j] = i</span><br><span class="line">            self.size[i] += self.size[j]</span><br><span class="line">        <span class="comment"># 每次合并group减一</span></span><br><span class="line">        self.group -= <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%B9%B6%E6%9F%A5%E9%9B%86">Wiki</a>  &nbsp; <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/1J7q2RImSbg26vrWMaYQwYo6_zPDrrdGRmwm_U2oY20s/edit#slide=id.g3461f6c3fc_1_0">PPT</a>  </li>
+</ul>
+<h2 id="Tree"><a href="#Tree" class="headerlink" title="Tree"></a>Tree</h2><h3 id="BST"><a href="#BST" class="headerlink" title="BST"></a>BST</h3><p>线性链表的查询时间复杂度为 <code>O(n)</code>, 为了加快查找, 可以使用二叉搜索树, BST的查找, 插入复杂度都为 <code>O(logN)</code><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/rPGbPe"><img src="https://s3.ax1x.com/2020/12/09/rPGbPe.jpg" alt="rPGbPe.jpg"></a><br><a target="_blank" rel="noopener" href="https://imgchr.com/i/rPJ9IS"><img src="https://s3.ax1x.com/2020/12/09/rPJ9IS.jpg" alt="rPJ9IS.jpg"></a><br>BST在最坏的情况下会退化成链表(升序插入节点), 为了 <code>平衡</code> 这颗树, 我们可以通过旋转操作来平衡BST, 也可以通过Split操作平衡BST。</p>
+<h3 id="B-Trees"><a href="#B-Trees" class="headerlink" title="B-Trees"></a>B-Trees</h3><p>可以使用Split Node的方式平衡一棵树, 即B-Trees, B-Trees是严格意义上的平衡树, 一个节点中可以有多个值, 当一个节点中的元素达到最大数量时Split该节点. 下图是一颗<code>2-3树</code>(tree node可以有2, 3个子节点)插入数据时的Split行为<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/rZ3FHA"><img src="https://s3.ax1x.com/2020/12/12/rZ3FHA.jpg" alt="rZ3FHA.jpg"></a><br>B-Trees一般用于数据库索引中, 每个节点容纳值通常很大. </p>
+<h3 id="Red-Black-Trees"><a href="#Red-Black-Trees" class="headerlink" title="Red-Black Trees"></a>Red-Black Trees</h3><p>也可以通过旋转操作来平衡一颗Tree, 但Red-Black Trees并不是严格意义上的平衡树, 而是<code>perfectly black balanced</code>. 把红黑树的Red links水平放置后其实就相当于B-Trees.<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/rZGrp6"><img src="https://s3.ax1x.com/2020/12/12/rZGrp6.jpg" alt="rZGrp6.jpg"></a><br><a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/1j7kiMfMzmhdi6AoKSuYdZr65iH7ckeWMKGQAyI4M61c/edit#slide=id.g313d7fc2bb_0_442">平衡树PPT</a></p>
+<h2 id="Hashing"><a href="#Hashing" class="headerlink" title="Hashing"></a>Hashing</h2><p>散列表(Hash table, 也叫哈希表), 是根据键(Key)而直接访问在内存储存位置的数据结构。也就是说, 它通过计算一个关于键值的函数, 将所需查询的数据映射到表中一个位置来访问记录, 这加快了查找速度。这个映射函数称做散列函数, 存放记录的数组称做散列表。<br><a target="_blank" rel="noopener" href="https://imgchr.com/i/rE82Ix"><img src="https://s3.ax1x.com/2020/12/11/rE82Ix.jpg" alt="rE82Ix.jpg"></a>  </p>
+<ul>
+<li>散列函数: 每个对象都有对应的HashCode, 可以根据取余法获得Index</li>
+<li>解决冲突: 链表法, 开放地址法</li>
+<li>负载因子: load factor = 填入表中的元素个数 / 散列表的长度, 一般在大于0.75时resize散列表  </li>
+</ul>
+<h3 id="Example-Hashing-a-Collection"><a href="#Example-Hashing-a-Collection" class="headerlink" title="Example: Hashing a Collection"></a>Example: Hashing a Collection</h3><pre><code class="Java">@Override
+public int hashCode() &#123;
+   int hashCode = 1;
+   for (Object o : this) &#123;
+       hashCode = hashCode * 31;
+       hashCode = hashCode + o.hashCode();
+       &#125;
+    return hashCode;
+&#125;</code></pre>
+<h3 id="BSTMap和HashMap实现-github"><a href="#BSTMap和HashMap实现-github" class="headerlink" title="BSTMap和HashMap实现: github"></a>BSTMap和HashMap实现: <a target="_blank" rel="noopener" href="https://github.com/lambdafate/CS61B-SP18/tree/master/lab9/lab9">github</a></h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="lambdafate WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="lambdafate Alipay">
+        <span>Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/08/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/" rel="prev" title="函数调用与返回值">
+                  <i class="fa fa-chevron-left"></i> 函数调用与返回值
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/12/27/LeetCode-221%E5%91%A8%E8%B5%9B/" rel="next" title="LeetCode-221周赛">
+                  LeetCode-221周赛 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lambdafate</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
